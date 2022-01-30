@@ -1,0 +1,26 @@
+{% load wagtailimages_tags %}
+
+<!-- About Block -->
+{% for about in self.about %}
+<div class="container p-5">
+  <section id="about" class="pt-5">
+    <div class="row pt-5">
+      <h1 class="mb-4 text-center">{{ about.about_title }}</h1>
+      <div class="col-lg-5 col-xl-4 mb-4 mb-lg-0 pb-2 pb-lg-0 pb-xl-2">
+        {% image about.about_image fill-800x1200 as profile_image %}
+        <img src="{{ profile_image.url }}" class="img-fluid shadow-1-strong" alt="Sample image" />
+      </div>
+      <div class="col-lg-7 col-xl-8">
+        <h4 class="mb-4">{{ about.about_lead_text }}</h4>
+        <p>
+          
+        </p>
+        <p>
+          
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+{% endfor %}
+<!-- End About Block -->

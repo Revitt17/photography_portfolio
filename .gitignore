@@ -1,0 +1,27 @@
+# Python
+*.pyc
+*~
+__pycache__
+
+# Env
+venv/
+
+# Database
+db.sqlite3
+
+# Media
+/media/
+
+# Secret key
+project/settings/secret_key.py
+
+# Windows
+Thumbs.db*
+ehthumbs*.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio
+.vscode/
+.history/
+*.code-workspace

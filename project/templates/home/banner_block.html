@@ -1,0 +1,35 @@
+{% load wagtailimages_tags %}
+
+<!-- Banner Block -->
+{% for banner in self.banner %}
+<section>
+  {% image banner.banner_image fill-1000x1500 as banner_image %}
+  <div id="intro" class="text-center bg-image vh-100" style="
+      background-image: url('{{ banner_image.url }}');">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="d-flex justify-content-center align-items-center h-100 mt-4">
+        <div class="text-white">
+          <h2 class="display-3 font-weight-bold mb-4 pb-2">{{ banner.banner_title }}</h2>
+          <h2 class="mb-5">{{ banner.banner_lead_text }}</h2>
+          <div class="dropdown">
+            <button class="btn btn-outline-white m-3 dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-mdb-toggle="dropdown" aria-expanded="false">
+              <!-- PORTFOLIO -->
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+              {% for gallery in portfolio %}
+              <li><a class="dropdown-item" href="{{ gallery.url }}" data-mdb-offset="100"
+                  data-mdb-smooth-scroll="smooth-scroll">{{ gallery.title }}</a>
+              </li>
+              {% endfor %}
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+<!-- End Banner Block -->

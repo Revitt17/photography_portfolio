@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+<!-- Body Steam Field -->
+{% for block in page.body %}
+  {% include_block block %}
+{% endfor %}
+<!-- End Body Stream Field -->
+
+{% endblock content %}
