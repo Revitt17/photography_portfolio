@@ -4,7 +4,7 @@
 <!-- NavBar -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="/"><!-- YOUR BRAND --></a>
+    <a class="navbar-brand" href="/">{{ settings.site_settings.NavbarSettings.brand }}</a>
     <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
       aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
@@ -19,11 +19,11 @@
         {% endfor %}
 
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/#about"><!-- ABOUT --></a>
+          <a class="nav-link" aria-current="page" href="/#about">{{ settings.site_settings.NavbarSettings.about }}</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-mdb-toggle="dropdown"
-            aria-expanded="false"><!-- PORTFOLIO --></a>
+            aria-expanded="false">{{ settings.site_settings.NavbarSettings.portfolio }}</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
 
             {% for gallery in portfolio %}
@@ -35,16 +35,71 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#contact"><!-- CONTACT -->/a>
+          <a class="nav-link" aria-current="page"
+            href="#contact">{{ settings.site_settings.NavbarSettings.contact }}</a>
         </li>
       </ul>
       <ul class="navbar-nav flex-row">
+        {% if settings.site_settings.SocialMediaSettings.vk %}
         <li class="nav-item">
-          <a class="nav-link" href="#!"><i class="fab fa-vk pe-2"></i></a>
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.vk }}"><i
+              class="fab fa-vk pe-2"></i></a>
         </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.facebook %}
         <li class="nav-item">
-          <a class="nav-link" href="#!"><i class="fab fa-instagram"></i></a>
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.facebook }}"><i
+              class="fab fa-facebook pe-2"></i></a>
         </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.instagram %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.instagram }}"><i
+              class="fab fa-instagram pe-2"></i></a>
+        </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.twitter %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.twitter }}"><i
+              class="fab fa-twitter pe-2"></i></a>
+        </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.tiktok %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.tiktok }}"><i
+              class="fab fa-tiktok pe-2"></i></a>
+        </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.github %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.github }}"><i
+              class="fab fa-github pe-2"></i></a>
+        </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.linkedin %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.linkedin }}"><i
+              class="fab fa-linkedin pe-2"></i></a>
+        </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.youtube %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.youtube }}"><i
+              class="fab fa-youtube pe-2"></i></a>
+        </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.whatsapp %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.whatsapp }}"><i
+              class="fab fa-whatsapp pe-2"></i></a>
+        </li>
+        {% endif %}
+        {% if settings.site_settings.SocialMediaSettings.telegram %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ settings.site_settings.SocialMediaSettings.telegram }}"><i
+              class="fab fa-telegram pe-2"></i></a>
+        </li>
+        {% endif %}
       </ul>
     </div>
   </div>

@@ -37,20 +37,20 @@ class About(blocks.StructBlock):
         help_text="About section title. Max length of 50 characters.",
     )
     about_lead_text = blocks.CharBlock(
-        max_length=50,
-        help_text="Lead text. Max length is 50 characters.",
+        max_length=200,
+        help_text="Lead text. Max length is 200 characters.",
         required=False
     )
     about_image = ImageChooserBlock(
         help_text="About profile image."
     )
     first_paragrapher = blocks.TextBlock(
-        max_length=50,
+        max_length=500,
         help_text="First paragrapher. Max length is 500 characters.",
         required=False
     )
     second_paragrapher = blocks.TextBlock(
-        max_length=50,
+        max_length=500,
         help_text="Second paragrapher. Max length is 500 characters.",
         required=False
     )

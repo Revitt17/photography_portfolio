@@ -29,8 +29,10 @@ INSTALLED_APPS = [
     'streams',
     'portfolio',
     'menus',
+    'site_settings',
 
     'wagtail.contrib.modeladmin', # Add for use Django standard admin
+    'wagtail.contrib.settings', # Add for use "site_settings"
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -81,6 +83,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'wagtail.contrib.settings.context_processors.settings', 
+                # Add for use "site_settings"
             ],
         },
     },
