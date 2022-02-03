@@ -1,16 +1,15 @@
-from django.core.cache import cache
-from django.core.cache.utils import make_template_fragment_key
-from django.db import models
-
 from wagtail.admin.edit_handlers import StreamFieldPanel
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 from streams import blocks
 from portfolio.models import Portfolio
 
+
 class HomePage(Page):
     
+    template = "home/home_page.html"
     parent_page_types = ["wagtailcore.Page"]
+    subpage_types = ["portfolio.Portfolio"]
     max_count = 1
 
     body = StreamField([

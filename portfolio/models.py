@@ -1,13 +1,15 @@
 from django.db import models
 from wagtail.core.models import Page, Orderable
-from wagtail.admin.edit_handlers import FieldPanel
 from modelcluster.fields import ParentalKey
 from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
-from django.db.models import TextField
 
 
 class Portfolio(Page):
+
+    template = "portfolio/portfolio.html"
+    parent_page_types = ["home.HomePage"]
+    subpage_types = []
 
     background_home = models.ForeignKey(
         'wagtailimages.Image',

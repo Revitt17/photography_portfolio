@@ -1,5 +1,5 @@
 from .base import *
-from settings import secret_key
+from ..settings.secret_key import secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
