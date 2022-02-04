@@ -1,10 +1,16 @@
 from .base import *
-from ..settings.secret_key import secret_key
 
 
 DEBUG = False
-SECRET_KEY = secret_key
+SECRET_KEY = ''
 ALLOWED_HOSTS = ['*'] 
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+STATIC_ROOT = ''
+STATIC_URL = '/static/'
+MEDIA_ROOT = ''
+MEDIA_URL = '/media/'
 
 
 try:

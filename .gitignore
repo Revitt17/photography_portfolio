@@ -12,8 +12,9 @@ db.sqlite3
 # Media
 /media/
 
-# Secret key
+# Settings
 project/settings/secret_key.py
+project/settings/local.py
 
 # Windows
 Thumbs.db*
