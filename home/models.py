@@ -16,6 +16,7 @@ class HomePage(Page):
         ("banner", blocks.BannerBlock()),
         ("about", blocks.AboutBlock()),
         ("projects", blocks.ProjectsBlock()),
+        ("contact", blocks.ContactBlock()),
     ], null=True, blank=True)
 
     content_panels = Page.content_panels + [

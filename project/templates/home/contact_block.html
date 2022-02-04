@@ -1,0 +1,54 @@
+{% load wagtailimages_tags %}
+
+<!-- Contact Block -->
+{% for contact in self.contact %}
+<section id="contact" class="container p-5">
+  <div class="row py-5">
+    <h1 class="mb-3 fs-1 text-dark mb-4 text-center" style="font-weight: 700;">
+      {{ contact.contact_section_title }}
+    </h1>
+    <h3 class="mb-4 fs-4 text-dark mb-4" style="font-weight: 200;">{{ contact.contact_lead_text }}</h3>
+    <div class="col-md-6 mb-4">
+      <p class="mb-4 fs-3 text-dark mb-4" style="font-weight: 600;">{{ contact.contact_title }}</p>
+      <ul>
+        <p>{{ contact.contact_phone }}</p>
+        <p>{{ contact.contact_email }}</p>
+        {% if contact.contact_whatsapp %}
+        <a class="btn btn-primary me-2 mb-2" style="background-color: #25d366;" href="{{ contact.contact_whatsapp }}"
+          role="button">
+          <i class="fab fa-whatsapp me-2"></i>
+          Whatsapp
+        </a>
+        {% endif %}
+        {% if contact.contact_telegram %}
+        <a class="btn btn-primary me-2 mb-2" style="background-color: #4c75a3;" href="{{ contact.contact_telegram }}"
+          role="button">
+          <i class="fab fa-telegram me-2"></i>
+          Telegram
+        </a>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="col-md-6 mb-4">
+      <hr>
+      <p class="mb-4 fs-3 text-dark mb-4" style="font-weight: 600;">{{ contact.social_network_title }}</p>
+      {% if contact.contact_vk %}
+      <a style="color: #4c75a3;" href="{{ contact.contact_vk }}" role="button">
+        <i class="fab fa-vk fa-lg p-2"></i>
+      </a>
+      {% endif %}
+      {% if contact.contact_instagram %}
+      <a style="color: #ac2bac;" href="{{ contact.contact_instagram }}" role="button">
+        <i class="fab fa-instagram fa-lg p-2"></i>
+      </a>
+      {% endif %}
+      {% if contact.contact_tiktok %}
+      <a style="color: #000000;" href="{{ contact.contact_tiktok }}" role="button">
+        <i class="fab fa-tiktok fa-lg p-2"></i>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+<!-- End Contact Block -->

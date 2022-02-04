@@ -91,3 +91,73 @@ class ProjectsBlock(blocks.StructBlock):
         template = "home/projects_block.html"
         icon = "image"
         label = "projects"
+
+
+class Contact(blocks.StructBlock):
+
+    contact_section_title = blocks.CharBlock(
+        max_length=50,
+        help_text="Contact section title. Max length is 50 characters.",
+    )
+    contact_lead_text = blocks.CharBlock(
+        max_length=500,
+        help_text="Lead text. Max length is 500 characters.",
+        required=False
+    )
+    contact_title = blocks.TextBlock(
+        max_length=50,
+        help_text="Contact section title. Max length is 50 characters.",
+        required=False
+    )
+    contact_phone = blocks.TextBlock(
+        max_length=100,
+        help_text="Format = 'Phone: +0123456789' ",
+        required=False
+    )
+    contact_email = blocks.TextBlock(
+        max_length=100,
+        help_text="Format = 'Email: email@email.com' ",
+        required=False
+    )
+    contact_whatsapp = blocks.URLBlock(
+        max_length=200,
+        help_text="Enter your Whatsapp url.",
+        required=False
+    )
+    contact_telegram = blocks.URLBlock(
+        max_length=200,
+        help_text="Enter your Telegram url.",
+        required=False
+    )
+    social_network_title = blocks.TextBlock(
+        max_length=50,
+        help_text="Title social networks section.",
+        required=False
+    )
+    contact_vk = blocks.URLBlock(
+        max_length=200,
+        help_text="Enter your VK url.",
+        required=False,
+    )
+    contact_instagram = blocks.URLBlock(
+        max_length=200,
+        help_text="Enter your Instagram url.",
+        required=False
+    )
+    contact_tiktok = blocks.URLBlock(
+        max_length=200,
+        help_text="Enter your TikTok url.",
+        required=False
+    )
+
+
+class ContactBlock(blocks.StructBlock):
+
+    contact = blocks.ListBlock(
+        Contact()
+    )
+
+    class Meta:
+        template = "home/contact_block.html"
+        icon = "form"
+        label = "Contact"
