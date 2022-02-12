@@ -1,13 +1,49 @@
 {% extends "base.html" %}
-{% load wagtailimages_tags wagtailcore_tags %}
+{% load static wagtailimages_tags wagtailcore_tags %}
 {% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home/home.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/home/aos.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<!-- Body Steam Field -->
-{% for block in page.body %}
-{% include_block block %}
-{% endfor %}
-<!-- End Body Stream Field -->
+<!-- Hero Section -->
+{% include "home/hero_section.html" %}
+<!-- END Hero Section -->
 
+<main id="main">
+
+  <!-- About Section -->
+  {% include "home/about_section.html" %}
+  <!-- END About Section -->
+
+  <!-- Portfolio Section -->
+  {% include "home/portfolio_section.html" %}
+  <!-- END Portfolio Section -->
+
+  <!-- Contact Section -->
+  {% include "home/contact_section.html" %}
+  <!-- END Contact Section -->
+
+</main>
 {% endblock content %}
+
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/home/aos.js' %}"></script>
+<script>
+  (function () {
+    // Animation on scroll
+    window.addEventListener('load', () => {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      })
+    });
+  })()
+
+</script>
+{% endblock %}

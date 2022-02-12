@@ -1,0 +1,24 @@
+{% load wagtailimages_tags %}
+
+<!-- About Section -->
+<section id="about" class="py-5" style="background: #f7f7f7;">
+  <div class="container">
+    <div class="row pt-5" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="mb-4 text-center mb-4">{{ page.about_title }}</h1>
+      <div class="col-lg-5 col-xl-4 mb-4 mb-lg-0 pb-2 pb-lg-0 pb-xl-2">
+        {% image page.about_image fill-800x1200 as profile_image %}
+        <img src="{{ profile_image.url }}" class="img-fluid shadow-1-strong" alt="Sample image" />
+      </div>
+      <div class="col-lg-7 col-xl-8">
+        <h4 class="mb-4" style="font-weight: 600;">{{ page.about_lead_text }}</h4>
+        <p class="fs-4 mb-4" style="font-weight: 400;">
+          {{ page.about_first_paragrapher }}
+        </p>
+        <p class="fs-4 mb-4" style="font-weight: 400;">
+          {{ page.about_second_paragrapher }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END About Section -->

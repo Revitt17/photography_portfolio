@@ -2,20 +2,20 @@
 {% load static wagtailcore_tags wagtailimages_tags %}
 
 {% block extra_css %}
-<link href="{% static 'css/justifiedGallery.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/portfolio/justifiedGallery.min.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid my-5 pt-4">
   <section>
     <div class="lightbox pt-4" id="gallery">
-      
-        {% for photo in self.gallery_images.all %}
-        {% image photo.image width-1920 format-webp as photo %}
-        <div>
-          <img src="{{photo.url}}" class="w-100 shadow-3-strong" />
-        </div>
-        {% endfor %}
+
+      {% for photo in self.gallery_images.all %}
+      {% image photo.image width-1920 format-webp as photo %}
+      <div>
+        <img src="{{photo.url}}" class="w-100 shadow-3-strong" />
+      </div>
+      {% endfor %}
 
     </div>
   </section>
@@ -24,14 +24,15 @@
 
 {% block extra_js %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="{% static 'js/jquery.justifiedGallery.min.js' %}"></script>
+<script src="{% static 'js/portfolio/jquery.justifiedGallery.min.js' %}"></script>
 
-  <script>
-    $('#gallery').justifiedGallery({
-      rowHeight: 250,
-      lastRow: 'nojustify',
-      margins: 3
-    });
-  </script>
-  
+<script>
+  $('#gallery').justifiedGallery({
+    rowHeight: 275,
+    lastRow: 'nojustify',
+    margins: 3
+  });
+
+</script>
+
 {% endblock %}

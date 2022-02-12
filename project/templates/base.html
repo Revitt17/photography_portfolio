@@ -1,7 +1,7 @@
 {% load static wagtailcore_tags wagtailuserbar %}
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="ru">
 
 <head>
   <meta charset="utf-8" />
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   {# Global stylesheets #}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base/mdb.min.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,12 +28,12 @@
 
 </head>
 
-<body class="{% block body_class %}{% endblock %}">
+<body>
   {% wagtailuserbar %}
 
   <!-- NavBar -->
   {% include "base_include/navbar.html" %}
-  <!-- End NavBar -->
+  <!-- END NavBar -->
 
   {% block content %}
   <!-- Content Here! -->
@@ -41,10 +41,10 @@
 
   <!-- Footer -->
   {% include "base_include/footer.html" %}
-  <!-- End Footer -->
+  <!-- END Footer -->
 
   {# Global javascript #}
-  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/base/mdb.min.js' %}"></script>
 
   {% block extra_js %}
   {% endblock %}
