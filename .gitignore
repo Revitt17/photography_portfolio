@@ -9,6 +9,9 @@ venv/
 # Database
 db.sqlite3
 
+# SSH
+/ssh/
+
 # Media
 /media/
 
