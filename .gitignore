@@ -3,20 +3,19 @@
 *~
 __pycache__
 
-# Env
-venv/
-
 # Database
 db.sqlite3
 
-# SSH
-/ssh/
+# Env
+venv/
+
+# Deploy dir
+deploy/
 
 # Media
-/media/
+media/
 
 # Settings
-project/settings/secret_key.py
 project/settings/local.py
 
 # Windows
