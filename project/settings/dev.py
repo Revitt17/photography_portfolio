@@ -1,5 +1,5 @@
 from .base import *
-from ...deploy.production.production import secret_key
+from ...deployment.production.production import secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

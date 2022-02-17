@@ -10,13 +10,14 @@ db.sqlite3
 venv/
 
 # Deploy dir
-deploy/
+deployment/
 
 # Media
 media/
 
 # Settings
 project/settings/local.py
+project/settings/secret
 
 # Windows
 Thumbs.db*

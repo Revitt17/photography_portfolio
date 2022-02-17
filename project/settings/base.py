@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'home',
     'search',
     'portfolio',
-    'menus',
     'site_settings',
 
     'wagtail.contrib.modeladmin', # Add for use Django standard admin
@@ -162,7 +161,7 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "project"
+WAGTAIL_SITE_NAME = "photography_portfolio"
 
 
 # Search

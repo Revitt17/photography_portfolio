@@ -13,6 +13,12 @@ class NavbarSettings(BaseSetting):
         null=True,
         help_text='Enter your Brand, it will appear on the navbar' 
     )
+    home = models.CharField(
+        max_length=50,
+        blank=False,
+        null=True,
+        help_text='Choose how to call the link for "Home" section in navabar'
+    )
     about = models.CharField(
         max_length=50,
         blank=False,
@@ -23,7 +29,7 @@ class NavbarSettings(BaseSetting):
         max_length=50,
         blank=False,
         null=True,
-        help_text='Choose how to call the link for "Portfolio" page in navabar'
+        help_text='Choose how to call the link for "Work" section in navabar'
     )
     contact = models.CharField(
         max_length=50,
@@ -34,6 +40,7 @@ class NavbarSettings(BaseSetting):
 
     panels = [
         FieldPanel("brand"),
+        FieldPanel("home"),
         FieldPanel("about"),
         FieldPanel("portfolio"),
         FieldPanel("contact"),

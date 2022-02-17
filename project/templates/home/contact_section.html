@@ -1,52 +1,54 @@
 {% load wagtailimages_tags %}
 
 <!-- Contact Section -->
-<section id="contact" class="contact py-5" style="background: #f7f7f7;" data-aos="zoom-in" data-aos-delay="100">
-  <div class="container pb-5">
-    <div class="section-title">
-      <h1 class="text-center pt-5">{{ page.contact_section_title }}</h1>
-      <p class="fs-4 mb-4" style="font-weight: 400;">
-        {{ page.contact_lead_text }}
-      </p>
-    </div>
-    <div class="row pb-2">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="info-box">
-              <i class="fab fa-social fa-lg p-2"></i>
-              <h3>{{ page.social_network_title }}</h3>
-              <div class="social-links">
-                {% if page.contact_vk %}
-                <a href="{{ page.contact_vk }}"><i class="fab fa-vk fa-lg p-2"></i></a>
-                {% endif %}
-                {% if page.contact_instagram %}
-                <a href="{{ page.contact_instagram }}"><i class="fab fa-instagram fa-lg p-2"></i></a>
-                {% endif %}
-                {% if page.contact_tiktok %}
-                <a href="{{ page.contact_tiktok }}"><i class="fab fa-tiktok fa-lg p-2"></i></a>
-                {% endif %}
-                {% if page.contact_telegram %}
-                <a href="{{ page.contact_telegram }}"><i class="fab fa-telegram fa-lg p-2"></i></a>
-                {% endif %}
-                {% if page.contact_whatsapp %}
-                <a href="{{ page.contact_whatsapp }}"><i class="fab fa-whatsapp fa-lg p-2"></i></a>
-                {% endif %}
+<section id="contact">
+  <div class="contact py-5" style="background: #f7f7f7;" data-aos="zoom-in" data-aos-delay="100">
+    <div class="container pb-5">
+      <div class="section-title">
+        <h1 class="text-center pt-5">{{ page.contact_section_title }}</h1>
+        <p class="fs-4 mb-4" style="font-weight: 400;">
+          {{ page.contact_lead_text }}
+        </p>
+      </div>
+      <div class="row pb-2">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="info-box">
+                <i class="fab fa-social fa-lg p-2"></i>
+                <h3>{{ page.social_network_title }}</h3>
+                <div class="social-links">
+                  {% if page.contact_vk %}
+                  <a href="{{ page.contact_vk }}"><i class="fab fa-vk fa-lg p-2"></i></a>
+                  {% endif %}
+                  {% if page.contact_instagram %}
+                  <a href="{{ page.contact_instagram }}"><i class="fab fa-instagram fa-lg p-2"></i></a>
+                  {% endif %}
+                  {% if page.contact_tiktok %}
+                  <a href="{{ page.contact_tiktok }}"><i class="fab fa-tiktok fa-lg p-2"></i></a>
+                  {% endif %}
+                  {% if page.contact_telegram %}
+                  <a href="{{ page.contact_telegram }}"><i class="fab fa-telegram fa-lg p-2"></i></a>
+                  {% endif %}
+                  {% if page.contact_whatsapp %}
+                  <a href="{{ page.contact_whatsapp }}"><i class="fab fa-whatsapp fa-lg p-2"></i></a>
+                  {% endif %}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="info-box mt-4">
-              <i class="far fa-envelope fa-lg"></i>
-              <h3>{{ page.contact_email_title }}</h3>
-              <p>{{ page.contact_email }}</p>
+            <div class="col-md-6">
+              <div class="info-box mt-4">
+                <i class="far fa-envelope fa-lg"></i>
+                <h3>{{ page.contact_email_title }}</h3>
+                <p>{{ page.contact_email }}</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="info-box mt-4">
-              <i class="fas fa-phone fa-lg"></i>
-              <h3>{{ page.contact_phone_title }}</h3>
-              <p>{{ page.contact_phone }}</p>
+            <div class="col-md-6">
+              <div class="info-box mt-4">
+                <i class="fas fa-phone fa-lg"></i>
+                <h3>{{ page.contact_phone_title }}</h3>
+                <p>{{ page.contact_phone }}</p>
+              </div>
             </div>
           </div>
         </div>

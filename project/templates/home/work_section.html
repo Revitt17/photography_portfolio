@@ -1,0 +1,35 @@
+{% load wagtailimages_tags %}
+
+<!-- Work Section -->
+<section id="work">
+  <div class="text-center container px-5 py-5 portfolio" data-aos="zoom-in" data-aos-delay="100">
+    <h1 class="mb-3 mb-4 pt-5">
+      {{ page.portfolio_title }}
+    </h1>
+    <p class="fs-4 mb-4" style="font-weight: 400;">
+      {{ page.portfolio_lead_text }}
+    </p>
+    <div class="row">
+
+      {% for gallery in portfolio %}
+      <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+        <div class="card rounded-0 mb-3">
+          <div class="bg-image ripple hover-zoom rounded-0" data-mdb-ripple-color="light">
+            {% image gallery.background_home fill-1200x800 as bg %}
+            <img src="{{ bg.url }}" class="img-fluid" placeholder="nature" />
+            <a href="{{ gallery.url }}">
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <h3 class="text-white mb-0">{{ gallery.title }}</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+<!-- END Work Section -->

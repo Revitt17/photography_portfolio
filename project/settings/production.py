@@ -1,5 +1,5 @@
 from .base import *
-from ...deploy.production.production import ( 
+from ...deployment.production.production import ( 
     secret_key, database, allowed_hosts, sentrysdk)
 
 
