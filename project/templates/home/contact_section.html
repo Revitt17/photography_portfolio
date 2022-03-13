@@ -18,20 +18,20 @@
                 <i class="fab fa-social fa-lg p-2"></i>
                 <h3>{{ page.social_network_title }}</h3>
                 <div class="social-links">
-                  {% if page.contact_vk %}
-                  <a href="{{ page.contact_vk }}"><i class="fab fa-vk fa-lg p-2"></i></a>
+                  {% if settings.site_settings.SocialMediaSettings.vk %}
+                  <a href="{{ settings.site_settings.SocialMediaSettings.vk }}"><i class="fab fa-vk fa-lg p-2"></i></a>
                   {% endif %}
-                  {% if page.contact_instagram %}
-                  <a href="{{ page.contact_instagram }}"><i class="fab fa-instagram fa-lg p-2"></i></a>
+                  {% if settings.site_settings.SocialMediaSettings.instagram %}
+                  <a href="{{ settings.site_settings.SocialMediaSettings.instagram }}"><i class="fab fa-instagram fa-lg p-2"></i></a>
                   {% endif %}
-                  {% if page.contact_tiktok %}
-                  <a href="{{ page.contact_tiktok }}"><i class="fab fa-tiktok fa-lg p-2"></i></a>
+                  {% if settings.site_settings.SocialMediaSettings.tiktok %}
+                  <a href="{{ settings.site_settings.SocialMediaSettings.tiktok }}"><i class="fab fa-tiktok fa-lg p-2"></i></a>
                   {% endif %}
-                  {% if page.contact_telegram %}
-                  <a href="{{ page.contact_telegram }}"><i class="fab fa-telegram fa-lg p-2"></i></a>
+                  {% if settings.site_settings.SocialMediaSettings.telegram %}
+                  <a href="{{ settings.site_settings.SocialMediaSettings.telegram }}"><i class="fab fa-telegram fa-lg p-2"></i></a>
                   {% endif %}
-                  {% if page.contact_whatsapp %}
-                  <a href="{{ page.contact_whatsapp }}"><i class="fab fa-whatsapp fa-lg p-2"></i></a>
+                  {% if settings.site_settings.SocialMediaSettings.whatsapp %}
+                  <a href="{{ settings.site_settings.SocialMediaSettings.whatsapp }}"><i class="fab fa-whatsapp fa-lg p-2"></i></a>
                   {% endif %}
                 </div>
               </div>

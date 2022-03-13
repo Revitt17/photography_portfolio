@@ -67,7 +67,7 @@ class HomePage(Page):
         null=True,
     )
 
-    # Portfolio Section
+    # Work Section
     portfolio_title = models.CharField(
         max_length=140,
         blank=False,
@@ -93,31 +93,6 @@ class HomePage(Page):
     social_network_title = models.CharField(
         max_length=140,
         blank=False,
-        null=True,
-    )
-    contact_vk = models.URLField(
-        blank=True,
-        max_length=500,
-        null=True,
-    )
-    contact_instagram = models.URLField(
-        blank=True,
-        max_length=500,
-        null=True,
-    )
-    contact_tiktok = models.URLField(
-        blank=True,
-        max_length=500,
-        null=True,
-    )
-    contact_telegram = models.URLField(
-        blank=True,
-        max_length=500,
-        null=True,
-    )
-    contact_whatsapp = models.URLField(
-        blank=True,
-        max_length=500,
         null=True,
     )
     contact_email_title = models.CharField(
@@ -159,16 +134,11 @@ class HomePage(Page):
         MultiFieldPanel([
             FieldPanel("portfolio_title"),
             FieldPanel("portfolio_lead_text"),
-        ], heading="Portfolio Section"),
+        ], heading="Work Section"),
         MultiFieldPanel([
             FieldPanel("contact_section_title"),
             FieldPanel("contact_lead_text"),
             FieldPanel("social_network_title"),
-            FieldPanel("contact_vk"),
-            FieldPanel("contact_instagram"),
-            FieldPanel("contact_tiktok"),
-            FieldPanel("contact_telegram"),
-            FieldPanel("contact_whatsapp"),
             FieldPanel("contact_email_title"),
             FieldPanel("contact_email"),
             FieldPanel("contact_phone_title"),
@@ -178,8 +148,8 @@ class HomePage(Page):
 
     def get_context(self, request, *args, **kwargs):
         """ 
-        Get context from "Portfolio", necessary for "projects_block",
-        "banner_block" and "navbar".
+        Get context from "Portfolio", necessary for "hero_section" and
+        "work_section".
         """
         context = super().get_context(request, *args, **kwargs)
         context['portfolio'] = Portfolio.objects.live().public()

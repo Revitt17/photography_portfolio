@@ -30,16 +30,7 @@ class Portfolio(Page):
             ),
         ], heading="Gallery Images"),
     ]
-
-    def get_context(self, request, *args, **kwargs):
-        """ 
-        Get context from "Portfolio", necessary for "projects_block",
-        "banner_block" and "navbar".
-        """
-        context = super().get_context(request, *args, **kwargs)
-        context['portfolio'] = Portfolio.objects.live().public()
-        return context
-
+    
 
 class Gallery(Orderable):
 
